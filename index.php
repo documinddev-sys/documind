@@ -1,6 +1,7 @@
 <?php
-// This file is only used if someone accesses the root directory.
-// In production with Docker, Apache serves from /public/ directly,
-// so this should never be reached. For safety, redirect to /public/index.php
-header('Location: /public/index.php');
+// This file should not be accessed in production.
+// Docker + Apache serves from /var/www/html/public/ directly.
+// If you reach here, something is misconfigured.
+header('HTTP/1.1 403 Forbidden');
+echo 'Access denied. Please access the application through the proper domain.';
 exit;
