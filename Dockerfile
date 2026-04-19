@@ -6,6 +6,7 @@ WORKDIR /var/www/html
 RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libzip-dev \
+    libonig-dev \
     zip \
     unzip \
     curl \
